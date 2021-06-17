@@ -1,0 +1,33 @@
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("ROBLOX Hub", "Midnight")
+    local Tab = Window:NewTab("Main")
+    local Section = Tab:NewSection("Basically nothing")
+    local Tab = Window:NewTab("ROBLOX Scripts")
+    local Section = Tab:NewSection("Jailbreak Script")
+Section:NewButton("Click to Execute Jailbreak", "Jailbreak Script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/alohabeach/Main/master/Scripts/JailbreakAutoRob.lua"))()
+    print("Clicked")
+end)
+    local Section = Tab:NewSection("Ro-Ghoul Script")
+Section:NewButton("Click to Execute Ro-Ghoul", "Ro-Ghoul Script", function()
+    loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/z4gs/scripts/master/Ro-Ghoul%20Auto%20Farm.lua")))()
+    print("Clicked")
+end)
+    local Tab = Window:NewTab("FE Player")
+    local Section = Tab:NewSection("WalkSpeed")
+    Section:NewSlider("WalkSpeed", "Increases and Decreases Speed", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+    local Section = Tab:NewSection("JumpPower")
+    Section:NewSlider("JumpPower", "To increase or decrease your jump-power", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+    local Section = Tab:NewSection("Infinite Jump")
+    Section:NewButton("Click to Execute Jump in Air", "Infinite Jump", function()
+    InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+end)
