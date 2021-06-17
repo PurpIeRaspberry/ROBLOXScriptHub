@@ -1,5 +1,5 @@
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-    local Window = Library.CreateLib("ROBLOX Hub", "Midnight")
+    local Window = Library.CreateLib("ROBLOX Hub", "Serpent")
     local Tab = Window:NewTab("Main")
     local Section = Tab:NewSection("Basically nothing")
     local Tab = Window:NewTab("ROBLOX Scripts")
@@ -137,6 +137,11 @@ end)
     Section:NewSlider("JumpPower", "To increase or decrease your jump-power", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
+    local Section = Tab:NewSection("Floating Hat")
+Section:NewButton("Click to Execute", "Floating Hat", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/PurpIeRaspberry/FloatyHat/main/FloatyHat.lua'))()
+    print("Clicked")
+end)    
     local Section = Tab:NewSection("Infinite Jump")
     Section:NewButton("Click to Execute", "Infinite Jump", function()
     InfiniteJumpEnabled = true
@@ -144,5 +149,6 @@ game:GetService("UserInputService").JumpRequest:connect(function()
 	if InfiniteJumpEnabled then
 		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
 	end
+
 end)
 end)
