@@ -1,5 +1,5 @@
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-    local Window = Library.CreateLib("ROBLOX Hub", "Serpent")
+    local Window = Library.CreateLib("ROBLOX Hub", "Midnight")
     local Tab = Window:NewTab("Main")
     local Section = Tab:NewSection("Basically nothing")
     local Tab = Window:NewTab("ROBLOX Scripts")
@@ -138,7 +138,7 @@ end)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
     local Section = Tab:NewSection("Infinite Jump")
-    Section:NewButton("Click to Execute Jump in Air", "Infinite Jump", function()
+    Section:NewButton("Click to Execute", "Infinite Jump", function()
     InfiniteJumpEnabled = true
 game:GetService("UserInputService").JumpRequest:connect(function()
 	if InfiniteJumpEnabled then
