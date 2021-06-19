@@ -134,7 +134,7 @@ end)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
     local Section = Tab:NewSection("JumpPower")
-    Section:NewSlider("JumpPower", "To increase or decrease your jump-power", 500, 4, function(s) -- 500 (MaxValue) | 4 (MinValue)
+    Section:NewSlider("JumpPower", "To increase or decrease your jump-power", 500, 50, function(s) -- 500 (MaxValue) | 50 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
     local Section = Tab:NewSection("Floating Hat")
