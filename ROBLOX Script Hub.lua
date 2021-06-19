@@ -130,11 +130,11 @@ Section:NewButton("Click to Execute", "Ro-Ghoul Script", function()
 end)
     local Tab = Window:NewTab("FE Player")
     local Section = Tab:NewSection("WalkSpeed")
-    Section:NewSlider("WalkSpeed", "Increases and Decreases Speed", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    Section:NewSlider("WalkSpeed", "Increases and Decreases Speed", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
     local Section = Tab:NewSection("JumpPower")
-    Section:NewSlider("JumpPower", "To increase or decrease your jump-power", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    Section:NewSlider("JumpPower", "To increase or decrease your jump-power", 500, 4, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
     local Section = Tab:NewSection("Floating Hat")
